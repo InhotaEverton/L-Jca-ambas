@@ -1,0 +1,333 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('Images/areia-brita-.jpeg');
+    background-size: cover; /* A imagem cobrirá toda a tela */
+    background-position: center; /* A imagem será centralizada */
+    background-attachment: fixed; /* A imagem ficará fixa enquanto o usuário rola a página */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+    background: #975a21;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos do hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.4rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Menu Responsivo */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    nav ul.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Cabeçalho */
+.logo-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #f46e00; /* Cor do título */
+}
+
+.logo-link:hover {
+    color: white; /* Cor do título ao passar o mouse */
+}
+
+.logo {
+    font-size: 3rem; /* Tamanho maior para destacar o título */
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    color: #f46e00; /* Destacar com uma cor vibrante */
+    text-transform: uppercase; /* Deixar o texto em maiúsculas */
+    letter-spacing: 10px; /* Espaçamento entre letras */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 2rem;
+}
+
+.nav-list a {
+    color: #f46e00;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: white;
+}
+
+/* Hero */
+.hero {
+    background: #f4f4f4c7;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hero .btn {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background: #555;
+}
+
+.services, .about, .contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.service-item {
+    flex: 1 1 calc(25% - 2rem);
+    background: #f4f4f4e3;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.service-item {
+    flex: 1 1 calc(25% - 2rem);
+    background: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+.contact .btn {
+    background: #25d366; /* Cor do WhatsApp */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contact .btn:hover {
+    background: #1ebe57; /* Cor mais escura para hover */
+}
+
+/* Rodapé */
+.footer {
+    background:  #975a21;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0; /* Ajustado o espaçamento */
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 1rem 0; /* Aumentei o espaçamento entre os parágrafos */
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+.social-icon span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Cores ao passar o mouse */
+.social-icon.facebook:hover {
+    color: #1877F2; /* Azul do Facebook */
+}
+
+.social-icon.instagram:hover {
+    color: #e440d6; /* Rosa do Instagram */
+}
+
+.social-icon.linkedin:hover {
+    color: #0077B5; /* Azul do LinkedIn */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .nav-list li {
+        margin: 0.5rem 0;
+    }
+
+    .service-list {
+        flex-direction: column;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list a {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-item {
+        padding: 0.8rem;
+    }
+}
+
+/* Ajuste para imagens futuras */
+img {
+    max-width: 100%;
+    height: auto;
+}
